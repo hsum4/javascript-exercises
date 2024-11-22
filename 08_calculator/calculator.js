@@ -11,15 +11,21 @@ const sum = function(arr) {
 };
 
 const multiply = function(arr) {
-  return arr.reduce((total, current) => (total *= current));
+  return arr.reduce((total, current) => (total *= current), 1);
 };
 
-const power = function() {
-	
+const power = function(firstNum, secondNum) {
+  return firstNum ** secondNum;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+  if (num == 0 || num == 1){
+    return 1;
+  }
+  for (let i = num - 1; i > 1; i--){
+    num *= i;
+  }
+  return num;
 };
 
 // Do not edit below this line
